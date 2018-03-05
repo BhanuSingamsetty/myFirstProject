@@ -1,0 +1,36 @@
+.navbar {
+    height: 56px;
+    margin: 0px;
+    background:#1272dc;
+    color: white;
+    font-size: 16px;
+    font-family: arial,verdana,sans-serif;
+    border-bottom: 1px solid;
+}
+
+.lineheight50{
+  margin-top: 13px;
+  margin-left: 10px;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: #1272dc !important;
+}
+
+.navbar-toggle {
+  top: -50px !important;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #1272dc !important;
+    background-color: #1272dc !important;
+}
+
+.navbar-collapse.collapse.in {
+   display: block!important;
+}
+
+.icon-bar{
+  background-color: white;
+}
+

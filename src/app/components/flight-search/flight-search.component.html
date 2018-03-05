@@ -1,0 +1,46 @@
+  <app-navbar></app-navbar>
+
+  <app-sidebar (messageEvent)="recivedMessage($event)"></app-sidebar>
+
+  <div class="col-md-9 borderLeft borderTop">
+    <div class="row borderBottom">
+      <div class="col-md-9 col-sm-9">
+        <h3 *ngIf="originCity.length!=0"><span>{{originCity}} > {{destinationCity}}</span>
+          <span *ngIf="roundTrip"> > {{originCity}}</span>
+        </h3>
+      </div>
+
+      <div class="col-md-3 col-sm-3 textAlignRight">
+        <p class="margin0"> Depart: 8th Mar 2018 <br> Arrive: 10th Mar 2018</p>
+      </div>
+    </div>
+
+    <div class="row padding10">
+      <div *ngFor="let trips of flightData">
+        <div class="col-md-12 border marginb10 padding10">
+
+          <div class="col-md-4">
+            <h3>Rs.{{trips.price}}</h3>
+            <small>{{trips.airline}}</small>
+            <h5>{{trips.from}} > {{trips.to}}</h5>
+            <p>Depart :{{trips.departTime}}<br>Arrive :{{trips.arriveTime}}</p>
+          </div>
+
+          <div class="col-md-4 marginTop36px">
+            <h3></h3>
+            <small>{{trips.airline}}</small>
+            <h5>{{trips.to}} > {{trips.from}}</h5>
+            <p>Depart :{{trips.departTime}}<br>Arrive :{{trips.arriveTime}}</p>
+          </div>
+
+          <div class="col-md-4  margintop floatRight">
+            <img class="border height77 width77 marginTop25px" [src]="trips.imgURL" alt="trips.airline" >
+            <button class="btn margintop padding50px width100 buttonStyle">Book this flight</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 *ngIf="flightData.length==0"> No Results Found</h3>
+  </div>
+

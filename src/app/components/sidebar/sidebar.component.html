@@ -1,0 +1,64 @@
+<div class="col-md-3 bordeRight bordeTop responsiveStyle" id="myNavbar" aria-expanded="false">
+  <form action="/action_page.php">
+
+    <ul class="nav nav-pills">
+      <li class="navTab" [ngClass]="{ 'active' : !roundTrip}"><a class="navTabA" href="#" (click)="tripType('oneWay')">One Way</a></li>
+      <li class="navTab1" [ngClass]="{ 'active' : roundTrip}"><a class="navTabA1" href="#" (click)="tripType('return')">Return</a></li>
+    </ul>
+
+    <div class="form-group">
+      <input class="form-control" [(ngModel)]="originCity" name="originCity" (input)="showDropdown(originCity, 'origin')"  placeholder="Enter Origin City" #change>
+      <ul class="dropdown-menu1" *ngIf="showOriginCity">
+        <li class="pointer" *ngFor="let c of citiesLists | filter : originCity"  (click)="onListSelect(c, 'origin')">
+          {{c.name}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" [(ngModel)]="destinationCity" name="destinationCity" (input)="showDropdown(destinationCity, 'destination')"  placeholder="Enter Destination City" #change>
+      <ul class="dropdown-menu1" *ngIf="showDestinationCity">
+        <li class="pointer" *ngFor="let c of citiesLists | filter : destinationCity" (click)="onListSelect(c, 'destination')">
+          {{c.name}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-group">
+      <input  placeholder="Departure Date" [(ngModel)]="departureDate" min="2018-03-09" max="2018-03-11" name= "departureDate" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+    </div>
+
+    <div *ngIf="roundTrip" class="form-group">
+      <input placeholder="Return Date" [(ngModel)]="returnDate" min="2018-03-09" max="2018-03-11" name= "returnDate" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+    </div>
+
+    <div class="form-group">
+      <select class="form-control" [(ngModel)]="passengersCount" name="passengersCount" id="passengers"  placeholder="Passengers" required>
+        <option value="0" class="data-default">Passengers...</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+      </select>
+    </div>
+
+    <button type="button " class="btn btn-default buttonStyle" (click)="filterFlightData('fromSearchButton')">Search</button>
+
+    <div class="form-group border refineSearch">
+      <h5>Refine Flight Search</h5>
+      <input type="range" min="1000" max="5000" step="100" [(ngModel)]="refineRange" name="refineRange" #ref (change)="filterFlightData('fromRefine'); this.refineRange=ref.value;"/>{{ref.value}}
+    </div>
+
+  </form>
+</div>

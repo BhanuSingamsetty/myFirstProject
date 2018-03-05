@@ -1,0 +1,166 @@
+
+.border{
+   border: 1px solid #ccc;
+}
+
+.pointer {
+   cursor: pointer;
+   border-bottom: 1px solid #ccc;
+   text-decoration: none !important;
+   padding: 5px;
+   font-size: 15px;
+}
+.absolute{
+  position: absolute;
+}
+
+.form-control {
+   position: relative;
+}
+
+.dropdown-menu1 {
+    position: absolute;
+    display: block;
+    width: 260px;
+    padding: 0px;
+    margin:0px;
+    z-index: 1000;
+    float: left;
+    margin: .125rem 0 0;
+    font-size: 12px;
+    color: #292b2c;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+.refineSearch {
+   padding: 10px;
+   margin-top: 14px;
+}
+
+.nav{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navTab {
+   width: 105px;
+   text-align: center;
+   height: 36px;
+   margin: 0px;
+   border: 1px solid #1272dc;
+   border-top-left-radius: 0.45rem;
+   border-bottom-left-radius: 0.45rem;
+}
+
+.navTab1 {
+   width: 105px;
+   text-align: center;
+   height: 36px;
+   margin: 0px;
+   border: 1px solid #ccc;
+   border-top-right-radius: 0.45rem;
+   border-bottom-right-radius: 0.45rem;
+}
+
+.navTabA {
+  padding: 7px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.navTabA1 {
+  padding: 7px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #1272dc;
+    background: #1272dc;
+}
+
+.bordeRight{
+   border-right: 1px solid #ccc;
+}
+
+.bordeTop{
+    border-top: 1px solid #ccc;
+}
+
+.buttonStyle {
+    background: #1272dc;
+    color: white;
+ }
+
+@media (max-width: 576px) {
+ .responsiveStyle{
+    background: #1272dc;
+  }
+
+  .nav{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: white;
+  }
+
+  .navTab {
+     width: 105px;
+     text-align: center;
+     height: 36px;
+     margin: 0px;
+     border: 1px solid #eeeeee;
+     border-top-left-radius: 0.45rem;
+     border-bottom-left-radius: 0.45rem;
+  }
+
+  .navTab1 {
+     width: 105px;
+     text-align: center;
+     height: 36px;
+     margin: 0px;
+     border: 1px solid #eeeeee;
+     border-top-right-radius: 0.45rem;
+     border-bottom-right-radius: 0.45rem;
+  }
+
+  .navTabA {
+    color: white;
+    padding: 7px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .navTabA1 {
+    color: white;
+    padding: 7px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+   .nav-pills>li.active>a, .nav-pills>li.active>a:focus {
+     background: #eeeeee;
+     color: black;
+  }
+
+  .buttonStyle[_ngcontent-c3] {
+      background: #eeeeee;
+      color: black;
+  }
+
+  .refineSearch {
+      margin-bottom: 0px;
+      color: white;
+  }
+
+ }
+
+
+
+
+

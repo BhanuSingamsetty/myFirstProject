@@ -1,0 +1,77 @@
+.bordeRight{
+   border-right: 1px solid #ccc;
+}
+.borderLeft {
+  border-left: 1px solid #ccc;
+}
+.borderBottom{
+  border-bottom: 1px solid #ccc;
+}
+
+.borderTop{
+  border-top: 1px solid #ccc;
+}
+
+.lineheight50 {
+    line-height: 50px;
+    margin-left: 10px
+}
+.margin0{
+  margin: 0px !important;
+}
+
+.padding10 {
+    padding: 10px
+}
+.border{
+   border: 1px solid #ccc;
+}
+
+.marginb10{
+  margin-bottom: 10px;
+}
+
+.marginTop36px{
+  margin-top: 36px;
+}
+
+.marginTop25px {
+  margin-top: 25px;
+}
+
+.float-right{
+   float: right
+}
+
+.height77{
+   height: 94px;
+}
+
+.width77{
+  width: 100%;
+}
+.padding50px{
+    padding: 5px
+}
+
+.width100{
+    width: 100%;
+}
+
+.buttonStyle {
+   background: #1272dc;
+   color: white;
+}
+
+.textAlignRight {
+   text-align: right;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  .margin0{
+    float: left;
+  }
+}
+
